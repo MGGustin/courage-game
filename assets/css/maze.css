@@ -1,0 +1,19 @@
+#player {
+
+    position: absolute;
+    background: url(../images/courage.png) no-repeat;
+    background-size: 90px 90px;
+    width:90px;
+    height: 90px;
+    border: 1px solid red;
+
+}
+
+
+
+#map {
+    position: relative;
+    border: 1px solid black;
+    height: 300px;
+    width: 800px;
+}
