@@ -1,3 +1,10 @@
+body {
+background-image: url("../images/dogGameBkg.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+ 
+}
+
 #player {
 
     position: absolute;
