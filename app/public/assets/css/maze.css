@@ -1,0 +1,26 @@
+body { 
+    background: url(../images/dogGameBkg.jpg) no-repeat center center fixed; 
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+  }
+
+#playerFront {
+
+    position: absolute;
+    margin-top: 150px;
+    background: url(../images/courage.png) no-repeat;
+    background-size: 75px 75px;
+    width:90px;
+    height: 90px;
+}
+
+#player {
+
+    position: absolute;
+    margin-top: 150px;
+    background-size: 60px 60px !important;
+    width:200px;
+    height: 200px;
+}
