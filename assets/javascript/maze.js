@@ -33,13 +33,32 @@ var player = '<div id="player"></div>';
         }
 }
 
-// $(document).keyup(function(e) {
-//         setTimeout(function(){$("#player").css('background', "url(./assets/images/standingGif.gif) no-repeat")}, 2000);
-// });
- 
+
+
+$(document).keyup(function(e) {
+switch (e.keyCode)
+{
+case 37: //left
+        $("#player").css('background', "url(./assets/images/LeftBlink.gif) no-repeat")
+          break;
+         
+
+
+
+case 39: //right
+        $("#player").css('background', "url(./assets/images/RightBlink.gif) no-repeat")
+          break;
+
+
+
+case 40: //down
+        $("#player").css('background', "url(./assets/images/StandingGif.gif) no-repeat")
+          break;
+}
+});
+
 
 $(document).keydown(function(e) {
-
     //alert(e.keycode);
 
 var position =$("#player").position();
@@ -69,4 +88,8 @@ case 40: //down
         $("#player").css('top', position.top + 10 + 'px');
         walking('down');
         break;
-}})})
+}
+
+});
+
+});

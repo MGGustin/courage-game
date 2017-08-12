@@ -6,21 +6,24 @@ body {
     background-size: cover;
   }
 
-#playerFront {
-
-    position: absolute;
-    margin-top: 150px;
-    background: url(../images/courage.png) no-repeat;
-    background-size: 75px 75px;
-    width:90px;
-    height: 90px;
-}
 
 #player {
 
     position: absolute;
     margin-top: 150px;
     background-size: 60px 60px !important;
-    width:200px;
-    height: 200px;
+    width:60px;
+    height: 60px;
 }
+
+#wall {
+    position:absolute;
+    margin-top: 170px;
+    margin-top: 50px;
+    
+}
+
+audio {
+display: none;
+}
+
