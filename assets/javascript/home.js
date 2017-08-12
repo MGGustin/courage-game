@@ -15,3 +15,23 @@ function showPassword() {
     }
     
 }
+
+function postLogin(userCredentials){
+    $.post("/login", userCredentials,
+    function(data, status){
+        alert("Data: " + data + "\nStatus: " + status);
+    });
+}
+
+$("#btn-login").on("click", function(){
+   var email = $("#email").val();
+   var password = $("#key").val();
+
+   var userCredentials = {
+       email: email,
+       password: password
+   }
+
+   postLogin(userCredentials)
+ 
+})
