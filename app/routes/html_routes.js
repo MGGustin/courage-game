@@ -1,9 +1,10 @@
 var path = require('path');
 
-module.exports = function () {
+module.exports = function(app) {
     
     app.get('/', function(req, res) {
-        res.sendFile(path.join(__dirname, "/../public/home.html"));
+        res.sendFile(path.join(__dirname, "../public/home.html"));
+        // res.json({ success: true });
     });
 
     app.get('/level1', function(req, res) {
@@ -18,7 +19,7 @@ module.exports = function () {
         res.sendFile(path.join(__dirname, "/../public/level-3.html"))
     })
 
-    app.use(function(req, res) {
-        res.sendFile(path.join(__dirname, "/../public/home.html"));
-    });
+    //app.use(function(req, res) {
+       // res.sendFile(path.join(__dirname, "/../public/home.html"));
+    //});
 }

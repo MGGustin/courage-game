@@ -9,11 +9,13 @@ module.exports = function(app) {
 
     app.post('/login', function (req, res) {
 
-        if(req.body.username === "" && req.body.password === "") {
-            req.session.user = "";
+        console.log('incoming body ', req.body);
+
+        if(req.body.email === "Wormley5@aol.com" && req.body.password === "123hiphop") {
+            req.session.user = "Wormley5@aol.com";
             req.session.admin = true;
-            res.send("login success");
             console.log('login sussess')
+            res.send("login success");
         }
         else {
             res.send('login failed');
