@@ -1,26 +1,24 @@
 body {
 background-image: url("../images/dogGameBkg.jpg");
     background-repeat: no-repeat;
-    background-size: cover;
+    background-size: 80%;
  
 }
 
 #player {
 
     position: absolute;
+    margin-top: 150px;
     background: url(../images/courage.png) no-repeat;
-    background-size: 90px 90px;
+    background-size: 75px 75px;
     width:90px;
     height: 90px;
-    border: 1px solid red;
+   
 
 }
 
 
 
 #map {
-    position: relative;
-    border: 1px solid black;
-    height: 300px;
-    width: 800px;
+
 }
