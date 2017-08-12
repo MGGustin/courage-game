@@ -32,9 +32,13 @@ var player = '<div id="player"></div>';
         
         }
 }
+
+// $(document).keyup(function(e) {
+//         setTimeout(function(){$("#player").css('background', "url(./assets/images/standingGif.gif) no-repeat")}, 2000);
+// });
  
 
- $(document).keydown(function(e) {
+$(document).keydown(function(e) {
 
     //alert(e.keycode);
 
