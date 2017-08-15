@@ -7,7 +7,7 @@ module.exports = function(app) {
         // res.json({ success: true });
     });
 
-    app.get('/level1', function(req, res) {
+    app.get('/level-1', function(req, res) {
         res.sendFile(path.join(__dirname, "/../public/level-1.html"));
     });
 

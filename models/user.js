@@ -14,7 +14,7 @@ module.exports = function(app) {
         if(req.body.email === "Wormley5@aol.com" && req.body.password === "123hiphop") {
             req.session.user = "Wormley5@aol.com";
             req.session.admin = true;
-            console.log('login sussess')
+            console.log('login success')
             res.send("login success");
         }
         else {
