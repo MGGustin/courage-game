@@ -86,3 +86,7 @@ body {
 .btn-custom:focus {
     color: #fff;
 }
+
+audio {
+display: none;
+}
