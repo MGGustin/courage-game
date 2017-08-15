@@ -11,11 +11,11 @@ module.exports = function(app) {
         res.sendFile(path.join(__dirname, "/../public/level-1.html"));
     });
 
-    app.get('/level2', function(req, res) {
+    app.get('/level-2', function(req, res) {
         res.sendFile(path.join(__dirname, "/../public/level-2.html"));
     });
 
-    app.get('/level3', function(req, res) {
+    app.get('/level-3', function(req, res) {
         res.sendFile(path.join(__dirname, "/../public/level-3.html"))
     })
 
