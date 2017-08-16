@@ -16,7 +16,7 @@ body {
     padding-top: 50px
 }
 #login .form-wrap {
-    width: 30%;
+    width: 35%;
     margin: 0 auto;
 }
 #login h1 {
@@ -87,6 +87,3 @@ body {
     color: #fff;
 }
 
-audio {
-display: none;
-}
