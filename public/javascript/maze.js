@@ -2,9 +2,9 @@ $(function() {
 
         var player = '<div id="player"></div>';
         $("#map").append(player);
-        $("#player").css('background', "url(./assets/images/standingGif.gif) no-repeat");
+        $("#player").css('background', "url(images/standingGif.gif) no-repeat");
 
-        var Katz = '<div id="katz"><img id="katzImg" src="./assets/images/KatzFront/Front1.png"></div>';
+        var Katz = '<div id="katz"><img id="katzImg" src="images/KatzFront/Front1.png"></div>';
         $("#map").append(Katz);
 
         var direction = "down";
@@ -46,21 +46,21 @@ $(function() {
 
         var collision = false;
         
-        var leftSteps = ['./assets/images/Left/left1.png', './assets/images/Left/left2.png', './assets/images/Left/left3.png', './assets/images/Left/left4.png', './assets/images/Left/left5.png', './assets/images/Left/left6.png','./assets/images/Left/left7.png','./assets/images/Left/left8.png',];
+        var leftSteps = ['images/Left/left1.png', 'images/Left/left2.png', 'images/Left/left3.png', 'images/Left/left4.png', 'images/Left/left5.png', 'images/Left/left6.png','images/Left/left7.png','images/Left/left8.png',];
 
-        var rightSteps = ['./assets/images/Right/Right1.png', './assets/images/Right/Right2.png','./assets/images/Right/Right3.png','./assets/images/Right/Right4.png','./assets/images/Right/Right5.png','./assets/images/Right/Right6.png','./assets/images/Right/Right7.png','./assets/images/Right/Right8.png',];
+        var rightSteps = ['images/Right/Right1.png', 'images/Right/Right2.png','images/Right/Right3.png','images/Right/Right4.png','images/Right/Right5.png','images/Right/Right6.png','images/Right/Right7.png','images/Right/Right8.png',];
 
-        var upSteps = ['./assets/images/Back/Back1.png', './assets/images/Back/Back2.png', './assets/images/Back/Back3.png', './assets/images/Back/Back4.png', './assets/images/Back/Back5.png', './assets/images/Back/Back6.png', './assets/images/Back/Back7.png','./assets/images/Back/Back8.png', ]
+        var upSteps = ['images/Back/Back1.png', 'images/Back/Back2.png', 'images/Back/Back3.png', 'images/Back/Back4.png', 'images/Back/Back5.png', 'images/Back/Back6.png', 'images/Back/Back7.png','images/Back/Back8.png', ]
 
-        var downSteps = ['./assets/images/Front/Front1.png', './assets/images/Front/Front2.png', './assets/images/Front/Front3.png', './assets/images/Front/Front4.png', './assets/images/Front/Front5.png', './assets/images/Front/Front6.png', './assets/images/Front/Front7.png', './assets/images/Front/Front8.png',]
+        var downSteps = ['images/Front/Front1.png', 'images/Front/Front2.png', 'images/Front/Front3.png', 'images/Front/Front4.png', 'images/Front/Front5.png', 'images/Front/Front6.png', 'images/Front/Front7.png', 'images/Front/Front8.png',]
 
-        var leftStepsKat = ['./assets/images/KatzLeft/left1.png', './assets/images/KatzLeft/left2.png', './assets/images/KatzLeft/left3.png', './assets/images/KatzLeft/left4.png',];
+        var leftStepsKat = ['images/KatzLeft/left1.png', 'images/KatzLeft/left2.png', 'images/KatzLeft/left3.png', 'images/KatzLeft/left4.png',];
 
-        var rightStepsKat = ['./assets/images/KatzRight/Right1.png', './assets/images/KatzRight/Right2.png', './assets/images/KatzRight/Right3.png', './assets/images/KatzRight/Right4.png',];
+        var rightStepsKat = ['images/KatzRight/Right1.png', 'images/KatzRight/Right2.png', 'images/KatzRight/Right3.png', 'images/KatzRight/Right4.png',];
 
-        var upStepsKat = ['./assets/images/KatzBack/Back1.png', './assets/images/KatzBack/Back2.png', './assets/images/KatzBack/Back3.png', './assets/images/KatzBack/Back4.png',]
+        var upStepsKat = ['images/KatzBack/Back1.png', 'images/KatzBack/Back2.png', 'images/KatzBack/Back3.png', 'images/KatzBack/Back4.png',]
 
-        var downStepsKat = ['./assets/images/KatzFront/Front1.png', './assets/images/KatzFront/Front2.png', './assets/images/KatzFront/Front3.png', './assets/images/KatzFront/Front4.png',]
+        var downStepsKat = ['images/KatzFront/Front1.png', 'images/KatzFront/Front2.png', 'images/KatzFront/Front3.png', 'images/KatzFront/Front4.png',]
 
         var walls = [
              //   x=top y=left
@@ -247,20 +247,20 @@ $(document).keyup(function(e) {
 switch (e.keyCode)
 {
 case 37: //left
-        $("#player").css('background', "url(./assets/images/LeftBlink.gif) no-repeat")
+        $("#player").css('background', "url(images/LeftBlink.gif) no-repeat")
           break;
          
 
 
 
 case 39: //right
-        $("#player").css('background', "url(./assets/images/RightBlink.gif) no-repeat")
+        $("#player").css('background', "url(images/RightBlink.gif) no-repeat")
           break;
 
 
 
 case 40: //down
-        $("#player").css('background', "url(./assets/images/StandingGif.gif) no-repeat")
+        $("#player").css('background', "url(images/StandingGif.gif) no-repeat")
           break;
 }
 });
