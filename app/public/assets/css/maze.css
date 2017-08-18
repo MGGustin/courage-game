@@ -4,6 +4,7 @@ body {
     -moz-background-size: cover;
     -o-background-size: cover;
     background-size: cover;
+    overflow: hidden;
   }
 
 #playerFront {
@@ -19,8 +20,207 @@ body {
 #player {
 
     position: absolute;
-    margin-top: 150px;
+    left:40px;
+    top: 200px;
     background-size: 60px 60px !important;
-    width:200px;
-    height: 200px;
+    width:60px;
+    height: 60px;
+    
+    
+}
+
+#shelf {
+    position: absolute;
+    top: 10px;
+    left: 100px;
+    background-size: 60px 60px;
+    width:400px;
+    height:130px;
+    background: red hidden  ;
+}
+
+#basket {
+    position: absolute;
+    top: 520px;
+    left: 170px;
+    background-size: 60px 60px;
+    width:190px;
+    height:70px;
+    background: red hidden  ;
+}
+ #table {
+    position: absolute;
+    top: 450px;
+    left: 510px;
+    background-size: 60px 60px;
+    width:170px;
+    height:160px;
+    background: red hidden ;
+ }
+
+ 
+#box-3 {
+    position: absolute;
+    top: 267px;
+    left: 510px;
+    background-size: 60px 60px;
+    width:100px;
+    height:10px;
+    background: red hidden ;
+}
+#box-4 {
+    position: absolute;
+    top: 215px;
+    left: 690px;
+    background-size: 60px 60px;
+    width: 20px;
+    height: 90px;
+    background: purple hidden ;
+}
+
+    
+#box-5{
+    position: absolute;
+    top: 260px;
+    left: 820px;
+    background-size: 60px 60px;
+    width:100px;
+    height:5px;
+    background: red hidden ;
+
+}
+ #box-6{
+    position: absolute;
+    top: 328px;
+    left: 1135px;
+    background-size: 60px 60px;
+    width:90px;
+    height:1px;
+    background: red hidden ;
+
+}#box-7{
+    position: absolute;
+    top: 260px;
+    left: 820px;
+    background-size: 60px 60px;
+    width:100px;
+    height:35px;
+    background: red hidden ;
+
+}
+#box-7{
+    position: absolute;
+    top: 404px;
+    left: 200px;
+    background-size: 60px 60px;
+    width:100px;
+    height:1px;
+    background: red hidden ;
+
+}#box-8{
+    position: absolute;
+    top: 360px;
+    left: 470px;
+    background-size: 60px 60px;
+    width: 20px;
+    height: 15px;
+    background: red hidden ;
+
+}#box-9{
+    position: absolute;
+    top: 400px;
+    left: 780px;
+    background-size: 60px 60px;
+    width:100px;
+    height:1px;
+    background: red hidden ;
+
+
+
+}#box-10{
+    position: absolute;
+    top: 370px;
+    left: 1020px;
+    background-size: 60px 60px;
+    width:10px;
+    height:15px;
+    background: red hidden ;
+
+}
+#box-11{
+    position: absolute;
+    top: 525px;
+    left: 825px;
+    background-size: 60px 60px;
+    width:50px;
+    height:1px;
+    background: red hidden ;
+
+}
+
+#top-wall {
+    position: absolute;
+    top: 60px;
+    left: 0px;
+    background-size: 60px 60px;
+    width:100%;
+    height:50px;
+    background: purple hidden ;
+}
+
+#left-wall {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    background-size: 60px 60px;
+    width:10px;
+    height:100%;
+    background: purple hidden ;
+}
+
+#right-wall {
+    position: absolute;
+    top: 0px;
+    left: 1275px;
+    background-size: 60px 60px;
+    width:10;
+    height:100%;
+    background: purple hidden ;
+}
+
+#bottom-wall {
+    position: absolute;
+    top: 595px;
+    left: 0px;
+    background-size: 60px 60px;
+    width:100%;
+    height:20px;
+    background: teal hidden ;
+}
+
+/* #Katz {
+
+   position: absolute;
+    top: 200px;
+    left:1000px;
+    background-size: 45px 100px !important;
+    width: 60px;
+    height: 100px;
+} */
+
+#katzImg{
+    position: relative;
+    bottom: 40px;
+    width: 40px;
+    height: 80px;   
+}
+
+#katz {
+   position: absolute;
+    top: 200px;
+    left:1000px;
+    width: 20px;
+    height: 40px;
+    background-color:yellow hidden;
+
 }
