@@ -11,27 +11,21 @@ $(function() {
         setInterval(function(){
                 var curPos = $("#katz").position();
                 if(direction == "down") {
-                        curPos.top += 10;
+                        curPos.top += 5;
                 }
 
                 if(direction == "up") {
-                        curPos.top -= 10;
-                }
-
-                if(direction = "left") {
-                        curPos.left -= 10;
-                }
-
-                if(direction = "right") {
-                        curPos.left += 10;
+                        curPos.top -= 5;
                 }
                 
-                if(curPos.top > 400) {
+                if(curPos.top > 200) {
                         direction = "up"
                 }
-                if(curPos.top < 200) {
+                if(curPos.top < 100) {
                         direction = "down";
                 }
+
+                
 
                 
                 
