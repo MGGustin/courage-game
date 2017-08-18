@@ -1,3 +1,5 @@
+var db = require("../models/index");
+
 module.exports = function(app) {
 
     // var auth = function(req, res, next){
@@ -7,6 +9,24 @@ module.exports = function(app) {
     //         return res.sendStatus(401);
     // };
 
+    app.get('/getUser', function (req, res) {
+        var UserModel = db.sequelize.models.User;
+        UserModel.findAll().then(function(result) {
+            console.log('result ', result)
+            res.json(result);
+        });
+
+    });
+
+    app.get('/createUser', function (req, res) {
+        var UserModel = db.sequelize.models.User;
+        UserModel.create({ username: 'another_test', password: 'test' }).then(function(result) {
+            console.log('result ', result)
+            res.json(result);
+        });
+
+    });
+
     app.post('/login', function (req, res) {
 
         console.log('incoming body ', req.body);
@@ -14,7 +34,7 @@ module.exports = function(app) {
         if(req.body.email === "Wormley5@aol.com" && req.body.password === "123hiphop") {
             req.session.user = "Wormley5@aol.com";
             req.session.admin = true;
-            console.log('login sussess')
+            console.log('login success')
             res.send("login success");
         }
         else {
@@ -32,7 +52,7 @@ module.exports = function(app) {
         res.send("logout success!");
     });
 
-    app.get('/content', function(req, res) {
+    app.get('/level-1', function(req, res) {
         res.send("I've logged in succesfully!!")
     });
 
