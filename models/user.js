@@ -1,40 +1,11 @@
-module.exports = function(app) {
-
-    // var auth = function(req, res, next){
-    //     if (req.session && req.session.user === "amy" && req.session.admin)
-    //         return next();
-    //     else
-    //         return res.sendStatus(401);
-    // };
-
-    app.post('/login', function (req, res) {
-
-        console.log('incoming body ', req.body);
-
-        if(req.body.email === "Wormley5@aol.com" && req.body.password === "123hiphop") {
-            req.session.user = "Wormley5@aol.com";
-            req.session.admin = true;
-            console.log('login success')
-            res.send("login success");
-        }
-        else {
-            res.send('login failed');
-            console.log('login failed');
-        };
-        // if(!req.params.username === "amy"  || !req.params.password === "amyspassword") {
-        //     res.send('login failed');
-        //     console.log('login failed');
-        // }
+var Sequelize = require('sequelize');
+ 
+module.exports = function (sequelize) {
+    var User = sequelize.define("User", {
+        username: Sequelize.STRING,
+        password: Sequelize.STRING
     });
-
-    app.get('/logout', function (req,res) {
-        req.session.destroy();
-        res.send("logout success!");
-    });
-
-    app.get('/content', function(req, res) {
-        res.send("I've logged in succesfully!!")
-    });
-
+    return {
+        User: User
+    };
 };
-
