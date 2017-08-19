@@ -5,6 +5,7 @@ var path = require('path');
 var Sequelize = require("sequelize");
 var mysql = require('mysql');
 var passport = require('passport');
+var env = require('dotenv').load();
 
 
 // sequelize initialization
@@ -40,14 +41,15 @@ app.use(passport.session());
 ////////////////////////ROUTES///////////////////////////////
 require('./routes/html_routes.js')(app);
 require('./routes/user_routes.js')(app);
+require('./config/passport/passport.js')(passport, models);
 var db = require('./models/index.js');
-var authRoute = require('./routes/auth_routes.js')(app);
+var authRoute = require('./routes/auth_routes.js')(app, passport);
+var models = require('./models');
 
 
 
 
-
-db.sequelize.sync({ force: true }).then(function() {
+models.sequelize.sync().then(function() {
   app.listen(PORT, function() {
     console.log("App listening on PORT: " + PORT);
   });
