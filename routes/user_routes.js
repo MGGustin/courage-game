@@ -18,9 +18,9 @@ module.exports = function(app) {
 
     });
 
-    app.get('/createUser', function (req, res) {
+    app.post('/signup', function (req, res) {
         var UserModel = db.sequelize.models.User;
-        UserModel.create({ username: 'another_test', password: 'test' }).then(function(result) {
+        UserModel.create({ username: '', password: '' }).then(function(result) {
             console.log('result ', result)
             res.json(result);
         });

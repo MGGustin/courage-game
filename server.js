@@ -3,7 +3,8 @@ var bodyParser = require('body-parser');
 var session = require('express-session');
 var path = require('path');
 var Sequelize = require("sequelize");
-var mysql =require('mysql');
+var mysql = require('mysql');
+var passport = require('passport');
 
 
 // sequelize initialization
@@ -26,16 +27,21 @@ app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.text());
 app.use(bodyParser.json({ type: "application/vnd.api+json" }));
+
 app.use(session({
-    secret: '2C44-4D44-WppQ385', 
+    secret: 'keyboard', 
     resave: true, 
     saveUninitialized: true
 }));
+
+app.use(passport.initialize());
+app.use(passport.session());
 
 ////////////////////////ROUTES///////////////////////////////
 require('./routes/html_routes.js')(app);
 require('./routes/user_routes.js')(app);
 var db = require('./models/index.js');
+var authRoute = require('./routes/auth_routes.js')(app);
 
 
 
