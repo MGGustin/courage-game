@@ -1,0 +1,3 @@
+DROP TABLE IF EXISTS courage_db;
+
+CREATE DATABASE courage_db;
