@@ -1,4 +1,8 @@
+h1 {
+    text-align:center;
+    color:white;
 
+}
 body { 
     background: url(../images/enter.gif) no-repeat center center fixed; 
     -webkit-background-size: cover;
@@ -110,7 +114,7 @@ body {
         cursor: pointer;
         display: block;
         position: relative;
-        top: 150px;
+        top: 80px;
         left: 200px;
         display: block;
       }

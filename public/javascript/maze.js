@@ -1,38 +1,13 @@
+
 $(function() {
 
         var player = '<div id="player"></div>';
         $("#map").append(player);
         $("#player").css('background', "url(images/standingGif.gif) no-repeat");
 
-        var Katz = '<div id="katz"><img id="katzImg" src="images/KatzFront/Front1.png"></div>';
+        var Katz = '<div id="katz"></div>';
         $("#map").append(Katz);
-
-        var direction = "down";
-        setInterval(function(){
-                var curPos = $("#katz").position();
-                if(direction == "down") {
-                        curPos.top += 5;
-                }
-
-                if(direction == "up") {
-                        curPos.top -= 5;
-                }
                 
-                if(curPos.top > 200) {
-                        direction = "up"
-                }
-                if(curPos.top < 100) {
-                        direction = "down";
-                }
-
-                
-
-                
-                
-                $("#katz").css({top: curPos.top, left: curPos.left});
-
-        }, 25);
-
         var currentStep = 0;
         var currentStepKat = 0;
 
@@ -106,9 +81,12 @@ $(function() {
                         if (collisionDetection != null){
                                 collision = true;
                                 i = walls.length;
+                                i=KatMap;
                         } else {
                                 collision = false;
-                        }
+                                
+                        } 
+                        
                         
                 }
                 if (collision == false){ //no collision delected
@@ -134,6 +112,9 @@ $(function() {
                 } else {
                         //collision detected
                         // $("#map").append("<p style='color: red;'>ERROR</p>");
+
+                        //****** $("#player2Start").append("<p style='color: red;'>Player 2 Start </p>");*********
+                        
                         var bouncePlayer = $("#player").position();
                         console.log(collisionDetection);
                         if (collisionDetection == 't'){
@@ -146,14 +127,14 @@ $(function() {
                                 $("#player").css('left', bouncePlayer.left - 10 + 'px');
                         }
                         
-                }
-        } else if (character == 'kat'){
+                };
+        } else if (character == 'katz'){
                 //var katColPos = $("#katzCollision").position();
                 //console.log(katColPos);
-                var playerMap = {x: characterPosition.top, y: characterPosition.left, width: 60, height: 60};
+                var KatMap = {x: characterPosition.top, y: characterPosition.left, width: 60, height: 60};
                 for (var i = 0; i < walls.length; i++) {
                         //console.log(walls);
-                        var collisionDetection = colCheck(playerMap, walls[i]);
+                        var collisionDetection = colCheck(KatMap, walls[i]);
                         //console.log(collisionDetection);
                         if (collisionDetection != null){
                                 collision = true;
@@ -163,37 +144,37 @@ $(function() {
                         }
                 
                 }
-                if (collision == false){ //no collision delected
+                if (collision == false){ //no collision detected
                         if (currentStepKat == 3){
                                 currentStepKat = 0;
                         }
                         currentStepKat++;
                         if (dir == "left"){
-                                $("#katz").css('left', characterPosition.left - 10 + 'px');
-                                $("#katz").html("<img id='katzImg' src='"+ leftStepsKat[currentStepKat] +"'>");
+                               $("#katz").css('left', characterPosition.left - 15 + 'px');
+                                $("#katz").css('background', "url("+ leftStepsKat[currentStepKat] +") no-repeat");
                         } else if (dir == "right"){
-                                $("#katz").css('left', characterPosition.left + 10 + 'px');
-                                $("#katz").html("<img id='katzImg' src='"+ rightStepsKat[currentStepKat] +"'>");
+                                $("#katz").css('left', characterPosition.left + 15 + 'px');
+                                $("#katz").css('background', "url("+ rightStepsKat[currentStepKat] +") no-repeat"); 
                         }else if (dir == "up"){
-                                $("#katz").css('top', characterPosition.top - 10 + 'px');
-                                $("#katz").html("<img id='katzImg' src='"+ upStepsKat[currentStepKat] +"'>");
+                                $("#katz").css('top', characterPosition.top - 15 + 'px');
+                                $("#katz").css('background', "url("+ upStepsKat[currentStepKat] +") no-repeat"); 
                         }else if (dir == "down"){
-                                $("#katz").css('top', characterPosition.top + 10 + 'px');
-                                $("#katz").html("<img id='katzImg' src='"+ downStepsKat[currentStepKat] +"'>");
-                        };
+                                $("#katz").css('top', characterPosition.top + 15 + 'px');
+                                $("#katz").css('background', "url("+ downStepsKat[currentStepKat] +") no-repeat");
+                        }
                 } else {
                         //collision detected
                         // $("#map").append("<p style='color: red;'>ERROR</p>");
-                        var bouncePlayer = $("#katz").position();
+                        var bounceKat = $("#katz").position();
                         console.log(collisionDetection);
                         if (collisionDetection == 't'){
-                                $("#katz").css('top', bouncePlayer.top + 10 + 'px');
+                                $("#katz").css('top', bounceKat.top + 3 + 'px');
                         } else if (collisionDetection == 'b'){
-                                $("#katz").css('top', bouncePlayer.top - 10 + 'px');
+                                $("#katz").css('top', bounceKat.top - 3 + 'px');
                         } else if (collisionDetection == 'l'){
-                                $("#katz").css('left', bouncePlayer.left + 10 + 'px');
+                                $("#katz").css('left', bounceKat.left + 3 + 'px');
                         } else if (collisionDetection == 'r'){
-                                $("#katz").css('left', bouncePlayer.left - 10 + 'px');
+                                $("#katz").css('left', bounceKat.left - 3 + 'px');
                         }
                         
                 }
@@ -256,6 +237,7 @@ case 39: //right
 case 40: //down
         $("#player").css('background', "url(images/StandingGif.gif) no-repeat")
           break;
+
 }
 });
 
@@ -264,6 +246,8 @@ $(document).keydown(function(e) {
     //alert(e.keycode);
 
         var position =$("#player").position();
+        
+        var positionKat =$("#katz").position();
         //alert(position);
         switch (e.keyCode)
         {
@@ -279,10 +263,32 @@ $(document).keydown(function(e) {
                 walking('right', position, 'player');
                 break;
 
+
         case 40: //down
                 walking('down', position, 'player');
                 break;
+
+        case 65: //katz left
+                walking('left', positionKat, 'katz');
+                break;
+
+        case 87: //Katz up
+                walking('up', positionKat, 'katz');
+                break;
+
+        case 68: // Katz right
+                walking('right', positionKat, 'katz');
+                break;
+ 
+        case 83: // Katz down
+                walking('down', positionKat, 'katz');
+                break;
         }
+})
+
+        // $("#player2Start").append("<p style='color: red;'>Player 2 Start </p>");
+
+// $("#player2Start").keydown("<p style='color: red;'>Player 2 Start </p>")
 
 
 
@@ -290,6 +296,5 @@ $(document).keydown(function(e) {
 
 });
 
-});
 
 
