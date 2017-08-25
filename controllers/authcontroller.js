@@ -9,5 +9,5 @@ exports.signin = function(req, res) {
 }
 
 exports.level = function(req, res) {
-    res.render('/level-1')
+    res.render('level-1')
 }

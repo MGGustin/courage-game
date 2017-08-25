@@ -5,8 +5,7 @@ var path      = require('path');
 var Sequelize = require('sequelize');
 // var basename  = path.basename(module.filename);
 var env       = process.env.NODE_ENV || 'development';
-var config    = require(path.join(__dirname + '/../config/config.json'))[env];
-var sequelize = new Sequelize(config.database, config.username, config.password, config);
+var config    = require(path.join(__dirname + '/../config/config.json'))[env];var sequelize = new Sequelize(config.database, config.username, config.password, config);
 var db        = {};
 
 // if (config.use_env_variable) {
@@ -14,6 +13,13 @@ var db        = {};
 // } else {
 //   var sequelize = new Sequelize(config.database, config.username, config.password, config);
 // }
+
+if(process.env.JAWSDB_URL){
+  var sequalize=new Sequelize(process.env.JAWSDB_URL);
+ }
+ else {
+  var sequelize = new Sequelize(config.database, config.username, config.password, config);
+ }
 
 fs
   .readdirSync(__dirname)
