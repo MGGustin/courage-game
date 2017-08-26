@@ -1,10 +1,9 @@
 {
   "development": {
-    "username": "root",
-    "password": "root",
+    "username": "d62zhehfywfkn37n",
+    "password": "oss69d62f0gvugub",
     "database": "courage_db",
-    "host": "127.0.0.1",
-    "port": 8889,
+    "host": "l6slz5o3eduzatkw.cbetxkdyhwsb.us-east-1.rds.amazonaws.com",
     "dialect": "mysql"
   },
   "test": {
@@ -20,5 +19,6 @@
     "database": "courage_db",
     "host": "l6slz5o3eduzatkw.cbetxkdyhwsb.us-east-1.rds.amazonaws.com",
     "dialect": "mysql"
-  }
+  },
+  "use_env_variable":"process.env.JAWSDB_URL"
 }
