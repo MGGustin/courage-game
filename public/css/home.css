@@ -1,8 +1,4 @@
-h1 {
-    text-align:center;
-    color:white;
 
-}
 body { 
     background: url(../images/enter.gif) no-repeat center center fixed; 
     -webkit-background-size: cover;
@@ -77,6 +73,17 @@ body {
     color: #B23739;
 }
 
+.cursor-pointer {
+    cursor: pointer;
+}
+
+.modal-dialog {
+    width: 600px;
+    margin-top: 250px;
+}
+
+
+
 /*    --------------------------------------------------
 	:: Inputs & Buttons
 	-------------------------------------------------- */
@@ -114,7 +121,7 @@ body {
         cursor: pointer;
         display: block;
         position: relative;
-        top: 80px;
+        top: 150px;
         left: 200px;
         display: block;
       }
