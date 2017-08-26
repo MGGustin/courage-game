@@ -5,6 +5,7 @@
     "database": "courage_db",
     "host": "localhost",
     "dialect": "mysql"
+    "port": "8889"
   },
   "test": {
     "username": "root",
@@ -16,7 +17,7 @@
   "production": {
     "username": "d62zhehfywfkn37n",
     "password": "oss69d62f0gvugub",
-    "database": "courage_db",
+    "database": "htgrqwOsu2jrnvjx",
     "host": "l6slz5o3eduzatkw.cbetxkdyhwsb.us-east-1.rds.amazonaws.com",
     "dialect": "mysql"
   },
