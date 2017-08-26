@@ -1,9 +1,9 @@
 {
   "development": {
-    "username": "d62zhehfywfkn37n",
-    "password": "oss69d62f0gvugub",
+    "username": "root",
+    "password": "root",
     "database": "courage_db",
-    "host": "l6slz5o3eduzatkw.cbetxkdyhwsb.us-east-1.rds.amazonaws.com",
+    "host": "localhost",
     "dialect": "mysql"
   },
   "test": {
